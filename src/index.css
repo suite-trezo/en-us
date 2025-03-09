@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.gradient-bg {
+  background: linear-gradient(-45deg, #13123a, #1a1b4b, #2a2a72, #3b3b8c);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+.text-glow {
+  text-shadow: 0 0 10px rgba(66, 220, 255, 0.8);
+}
+
+.card-glow {
+  box-shadow: 0 0 15px rgba(66, 220, 255, 0.3);
+}
+
+.crypto-slide {
+  animation: slide 20s linear infinite;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
